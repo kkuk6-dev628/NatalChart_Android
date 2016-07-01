@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mobile.natal.natalchart.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:layout_weight="1">
+
+        <TabHost
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tabHostParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"></TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/tabCharts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView"
+                            android:minHeight="300dp"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/lblSignTab1"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#ffffff"
+                            android:layout_marginBottom="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tabPurpose"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                            <!--android:id="@+id/txtSignTab2"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:textColor="#fafafa" />-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/txtPurpose"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#fafafa"
+                            android:layout_marginTop="16dp"
+                            android:padding="3dp" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/txtPurposeTemplate"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="16dp"
+                                android:layout_margin="30dp"
+                                android:background="@color/textView_back"
+                                android:padding="3dp"
+                                android:visibility="visible" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tabAspects"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtAspects"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/textView_back"
+                            android:padding="5dp"
+                            android:visibility="visible"
+                            android:textAlignment="center"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="50dp"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:minHeight="35dp" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/scrollView"
+                            style="@style/AppTheme.MyButton"
+                            android:minWidth="300dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/txtPlainAspects"
+                                android:layout_margin="5dp"
+                                android:textAlignment="center"
+                                android:padding="5dp"
+                                android:textSize="16dp" />
+                        </ScrollView>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/aspectsMoreScroll"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            style="@style/AppTheme.MyButton"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:padding="5dp"
+                                android:id="@+id/txtAspectsMore" />
+                        </ScrollView>
+
+                        <ToggleButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MORE"
+                            android:id="@+id/btnMore"
+                            android:layout_gravity="center_horizontal"
+                            style="@style/AppTheme.MyButton"
+                            android:textOff="MORE"
+                            android:textOn="MORE"
+                            android:onClick="btnMoreClick"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tabProfile"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TabHost
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/tabHostProfile">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TabWidget
+                                    android:id="@android:id/tabs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"></TabWidget>
+
+                                <FrameLayout
+                                    android:id="@android:id/tabcontent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:id="@+id/tabMoon"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                                android:id="@+id/lblMoonName"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="15dp"
+                                                android:textColor="#ffffff"
+                                                android:textSize="20dp" />
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/imgMoon"
+                                                android:minHeight="150dp"
+                                                android:layout_weight="1"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                                android:id="@+id/lblMoonSign"
+                                                android:layout_gravity="center"
+                                                android:layout_marginRight="15dp"
+                                                android:textColor="#ffffff"
+                                                android:textSize="25dp" />
+                                        </LinearLayout>
+
+                                        <ScrollView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/scrollMoon"
+                                            android:layout_marginBottom="20dp">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/txtMoon" />
+                                        </ScrollView>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/tabSun"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                                android:id="@+id/lblSunName"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="15dp"
+                                                android:textColor="#ffffff"
+                                                android:textSize="20dp" />
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/imgSun"
+                                                android:minHeight="150dp"
+                                                android:layout_weight="1"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                                android:id="@+id/lblSunSign"
+                                                android:layout_gravity="center"
+                                                android:layout_marginRight="15dp"
+                                                android:textColor="#ffffff"
+                                                android:textSize="25dp" />
+                                        </LinearLayout>
+
+                                        <ScrollView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/scrollSun"
+                                            android:layout_marginBottom="20dp">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/txtSun" />
+                                        </ScrollView>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/tabRIsing"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                                android:id="@+id/lblRisingName"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="15dp"
+                                                android:textColor="#ffffff"
+                                                android:textSize="20dp" />
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/imgRising"
+                                                android:minHeight="150dp"
+                                                android:layout_weight="1"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginRight="15dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                                android:id="@+id/lblRisingSign"
+                                                android:layout_gravity="center"
+                                                android:layout_marginRight="15dp"
+                                                android:textColor="#ffffff"
+                                                android:textSize="25dp" />
+                                        </LinearLayout>
+
+                                        <ScrollView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:id="@+id/scrollRising"
+                                            android:layout_marginBottom="20dp">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:id="@+id/txtRising" />
+                                        </ScrollView>
+                                    </LinearLayout>
+                                </FrameLayout>
+                            </LinearLayout>
+                        </TabHost>
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout"
+        android:gravity="bottom"
+        android:layout_gravity="bottom">
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/tblRowMore"-->
+            <!--android:visibility="gone">-->
+
+            <!--<Button-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="MORE"-->
+                <!--android:id="@+id/btnMore"-->
+                <!--android:layout_column="2"-->
+                <!--android:visibility="visible"-->
+                <!--android:onClick="btnMoreClick"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--style="@style/AppTheme.MyButton" />-->
+        <!--</TableRow>-->
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHARTS"
+                android:id="@+id/btnCharts"
+                android:layout_weight="1"
+                style="@style/AppTheme.MyButton"
+                android:onClick="btnChartsClick"
+                android:textColor="@color/abc_primary_text_material_light"
+                android:background="#ffffff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ASPECTS"
+                android:id="@+id/btnAspects"
+                android:layout_weight="1"
+                style="@style/AppTheme.MyButton"
+                android:layout_column="2"
+                android:onClick="btnAspectsClick"
+                android:singleLine="false" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROFILE"
+                android:id="@+id/btnProfile"
+                android:layout_weight="1"
+                style="@style/AppTheme.MyButton"
+                android:onClick="btnProfileClick" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="PURPOSE"
+                android:id="@+id/btnPurpose"
+                android:layout_weight="1"
+                style="@style/AppTheme.MyButton"
+                android:layout_column="2"
+                android:onClick="btnPurposeClick" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

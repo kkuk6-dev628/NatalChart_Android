@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">NatalChart</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="prompt_username">USER NAME</string>
+    <string name="prompt_birthdate">DATE OF BIRTH</string>
+    <string name="prompt_birthtime">TIME OF BIRTH</string>
+    <string name="prompt_country">COUNTRY</string>
+    <string name="prompt_city">CITY</string>
+    <string name="prompt_longitude">LONGITUDE</string>
+    <string name="prompt_latitude">LATITUDE</string>
+    <string name="prompt_timezone">TIMEZONE</string>
+    <string name="prompt_email">EMAIL</string>
+    <string name="label_birthtimenot">Don\'t know</string>
+    <string name="action_submit">SUBMIT</string>
+    <string name="action_advanced">ADVANCED</string>
+    <string name="title_new_chart">CREATE A NEW CHART</string>
+    <string name="no_data">No data available</string>
+    <string name="file_upload_completed_properly">File upload completed properly.</string>
+    <string name="http_forbidden_msg">The access to the server has been denied. Please check your credentials and connection url.</string>
+    <string name="http_not_found_msg">The requested resource could not be found. Please check your connection url.</string>
+    <string name="http_not_implemented_code_msg">Trapped a return message code (please sent it to the developer): </string>
+    <string name="post_completed_properly">Post completed properly.</string>
+    <string name="http_ok_msg">The request was processed successfully.</string>
+    <string name="the_file_exists_wont_overwrite">The file exists. Won\'t overwrite: </string>
+    <string name="share_note_with">Share note with...</string>
+    <string name="country_err">Please select a Country</string>
+    <string name="city_err">Please select a City</string>
+    <string name="url_server">http://beta.theclaregatetrust.org/NatalChart/</string>
+    <string name="url_local_server">http://10.0.2.2/NatalChart/</string>
+    <string name="url_server_ip">10.0.2.2</string>
+    <string name="msg_input_server_ip">Please input ip address of the server.</string>
+    <string name="url_server_path">/NatalChart/chartapi.php</string>
+    <string name="error_birthdate">only years from 1902 through 2019 are valid</string>
+    <string name="server_failed">Don\'t make a chart</string>
+    <string name="server_connect_failed">Don\'t connect natal chart server</string>
+</resources>

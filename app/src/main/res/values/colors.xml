@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5102A7</color>
+    <color name="colorPrimaryDark">#5102A7</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="textColorSecondary">#ffffff</color>
+    <color name="windowBackground">#7f46be</color>
+    <color name="primary_text_material_dark">#8146be</color>
+    <color name="textColorPrimaryInverse">#8146be</color>
+    <color name="textColorPrimary">#deb7df</color>
+    <color name="colorBackground">#a9148e</color>
+    <color name="secondary_text_material_dark">#deb7df</color>
+    <color name="textView_back">#5a3799</color>
+</resources>
